@@ -1,0 +1,73 @@
+<div class="side-bar">
+  <div class="user-info ion-padding">
+    <ion-grid class="ion-no-padding">
+      <ion-row>
+        <ion-col size="3" class="ion-align-items-center ion-justify-content-center">
+          <img id="user-info-img" [src]="urlImgProfile" />
+        </ion-col>
+        
+        <ion-col size="9" class="ion-align-items-center ion-padding-start">
+          <p class="ion-no-padding">{{ userName }}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  
+  <div class="side-bar-navigation">
+    <ion-grid class="ion-no-padding">
+      <ion-row class="navigation">
+        <ion-col size="2" class="ion-align-items-center ion-justify-content-center">
+          <ion-icon name="home-outline"></ion-icon>
+        </ion-col>
+        
+        <ion-col size="10" class="ion-align-items-center">
+          <p>Home</p>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row class="navigation">
+        <ion-col size="2" class="ion-align-items-center ion-justify-content-center">
+          <ion-icon name="wallet-outline"></ion-icon>
+        </ion-col>
+        
+        <ion-col size="10" class="ion-align-items-center">
+          <p>Account</p>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row class="navigation">
+        <ion-col size="2" class="ion-align-items-center ion-justify-content-center">
+          <ion-icon name="checkmark-done-outline"></ion-icon>
+        </ion-col>
+        
+        <ion-col size="10" class="ion-align-items-center">
+          <p>Reminders</p>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row class="navigation">
+        <ion-col size="2" class="ion-align-items-center ion-justify-content-center">
+          <ion-icon name="repeat-outline"></ion-icon>
+        </ion-col>
+        
+        <ion-col size="10" class="ion-align-items-center">
+          <p>Automatic Payment</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  
+  <div class="log-out">
+    <ion-grid class="ion-no-padding">
+      <ion-row class="navigation">
+        <ion-col size="2" class="ion-align-items-center ion-justify-content-center">
+          <ion-icon name="log-out-outline"></ion-icon>
+        </ion-col>
+        
+        <ion-col size="10" class="ion-align-items-center">
+          <p>Log Out</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</div>
