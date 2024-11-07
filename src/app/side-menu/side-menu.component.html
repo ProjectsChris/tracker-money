@@ -3,11 +3,13 @@
     <ion-grid class="ion-no-padding">
       <ion-row>
         <ion-col size="3" class="ion-align-items-center ion-justify-content-center">
-          <img id="user-info-img" [src]="urlImgProfile" />
+          <img *ngIf="loaded" id="user-info-img" [src]="urlImgProfile" />
+          <ion-skeleton-text *ngIf="!loaded" [animated]="true" style="aspect-ratio: 1/1; width: 100%;"></ion-skeleton-text>
         </ion-col>
         
         <ion-col size="9" class="ion-align-items-center ion-padding-start">
-          <p class="ion-no-padding">{{ userName }}</p>
+          <p *ngIf="loaded" class="ion-no-padding">{{ userName }}</p>
+          <ion-skeleton-text *ngIf="!loaded" [animated]="true" style="width: 120px"></ion-skeleton-text>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -21,7 +23,8 @@
         </ion-col>
         
         <ion-col size="10" class="ion-align-items-center">
-          <p>Home</p>
+          <p *ngIf="loaded">Home</p>
+          <ion-skeleton-text *ngIf="!loaded" [animated]="true" style="width: 120px"></ion-skeleton-text>
         </ion-col>
       </ion-row>
       
@@ -31,7 +34,8 @@
         </ion-col>
         
         <ion-col size="10" class="ion-align-items-center">
-          <p>Account</p>
+          <p *ngIf="loaded">Account</p>
+          <ion-skeleton-text *ngIf="!loaded" [animated]="true" style="width: 120px"></ion-skeleton-text>
         </ion-col>
       </ion-row>
       
@@ -41,7 +45,8 @@
         </ion-col>
         
         <ion-col size="10" class="ion-align-items-center">
-          <p>Reminders</p>
+          <p *ngIf="loaded">Reminders</p>
+          <ion-skeleton-text *ngIf="!loaded" [animated]="true" style="width: 120px"></ion-skeleton-text>
         </ion-col>
       </ion-row>
       
@@ -51,13 +56,14 @@
         </ion-col>
         
         <ion-col size="10" class="ion-align-items-center">
-          <p>Automatic Payment</p>
+          <p *ngIf="loaded">Automatic Payment</p>
+          <ion-skeleton-text *ngIf="!loaded" [animated]="true" style="width: 120px"></ion-skeleton-text>
         </ion-col>
       </ion-row>
     </ion-grid>
   </div>
   
-  <div class="log-out">
+  <!-- <div class="log-out">
     <ion-grid class="ion-no-padding">
       <ion-row class="navigation">
         <ion-col size="2" class="ion-align-items-center ion-justify-content-center">
@@ -69,5 +75,5 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-  </div>
+  </div> -->
 </div>

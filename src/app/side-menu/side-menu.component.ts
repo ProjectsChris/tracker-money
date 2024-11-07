@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SideMenuComponent  implements OnInit {
   urlImgProfile: string = "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   userName: string = "Christopher 2024"
+  loaded: boolean = true
 
   constructor() { }
 
