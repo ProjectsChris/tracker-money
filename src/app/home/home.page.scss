@@ -1,3 +1,23 @@
-ion-content, ion-grid, ion-row {
+#grid-content, #grid-content ion-row {
     height: 100%;
+}
+
+.content-page {
+    overflow-y: scroll;
+    
+    .category-card {
+        padding: 5px 10px;
+        border-radius: 10px;
+        font-size: 11px;
+        background: #415a77;
+        color: #fff;
+    }
+    
+    ion-card {
+        background: #0d1b2a;
+        
+        ion-card-title {
+            color: #fff;
+        }
+    }
 }
