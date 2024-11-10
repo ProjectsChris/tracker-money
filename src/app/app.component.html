@@ -1,3 +1,15 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-content>
+    <ion-grid class="ion-no-padding" id="main-container">
+      <ion-row>
+        <ion-col sizeXl="2" sizeLg="3" sizeMd="4" sizeXs="0">
+          <wp-side-menu></wp-side-menu>
+        </ion-col>
+        
+        <ion-col sizeXl="10" sizeLg="9" sizeMd="8" sizeXs="12" class="ion-padding">
+          <ion-router-outlet></ion-router-outlet>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
 </ion-app>

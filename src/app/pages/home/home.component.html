@@ -1,0 +1,29 @@
+<ion-grid id="grid-home">
+  <ion-row>
+    <ion-col>
+      <h1 style="font-size: 42px;">HEY, WHAT'S UP?</h1>
+    </ion-col>
+  </ion-row>
+  
+  <ion-row>
+    <ion-col>Graph 1</ion-col>
+    <ion-col>Graph 2</ion-col>
+  </ion-row>
+  
+  <ion-row>
+    <ion-col class="ion-padding" sizeXl="3" sizeSm="6" sizeXs="12" *ngFor="let account of accounts; let i = index">
+      <ion-card class="ion-no-margin">
+        <ion-card-header>
+          <ion-card-title>Account {{ account }}</ion-card-title>
+          <ion-card-subtitle>
+            <span class="category-card">{{ account }}</span>
+          </ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <div style="height: 20px; width: 100%;"></div>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
