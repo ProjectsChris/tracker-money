@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { single } from './data';
+import { LegendPosition } from '@swimlane/ngx-charts';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  single!: any[];
+  legendPos: LegendPosition = LegendPosition.Right
 
-  constructor() {}
-
+  constructor() {
+    Object.assign(this, { single })
+  }
 }

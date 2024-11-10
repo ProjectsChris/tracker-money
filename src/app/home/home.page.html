@@ -14,8 +14,19 @@
           </ion-row>
           
           <ion-row>
-            <ion-col>Graph 1</ion-col>
-            <ion-col>Graph 2</ion-col>
+            <ion-col sizeLg="6" sizeXs="12">
+              <div>
+                <ngx-charts-pie-chart
+                [results]="single"
+                [legend]="true"
+                [legendPosition]="legendPos"
+                [animations]="false"
+                ></ngx-charts-pie-chart>
+              </div>
+            </ion-col>
+            <ion-col sizeLg="6" sizeXs="12">
+              Graph 2
+            </ion-col>
           </ion-row>
           
           <ion-row class="account-card">

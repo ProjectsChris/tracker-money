@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { SideMenuComponent } from '../side-menu/side-menu.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { SideMenuComponent } from '../side-menu/side-menu.component';
     CommonModule,
     FormsModule,
     IonicModule,
+    NgxChartsModule,
     HomePageRoutingModule,
   ],
   declarations: [HomePage, SideMenuComponent]
