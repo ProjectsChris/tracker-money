@@ -17,7 +17,7 @@
   
   <div class="side-bar-navigation">
     <ion-grid class="ion-no-padding">
-      <ion-row class="navigation" routerLink="/home" [ngClass]="getLink() == enLinkNavbar.Home ? 'active-link' : ''">
+      <ion-row class="navigation" routerLink="/home" (click)="setClickedLink(enLinkNavbar.Home)" [ngClass]="getNameLink() == enLinkNavbar.Home ? 'active-link' : ''">
         <ion-col size="2" class="ion-align-items-center ion-justify-content-center">
           <ion-icon name="home-outline"></ion-icon>
         </ion-col>
@@ -28,7 +28,7 @@
         </ion-col>
       </ion-row>
       
-      <ion-row class="navigation" routerLink="/account" [ngClass]="getLink() == enLinkNavbar.Accounts ? 'active-link' : ''">
+      <ion-row class="navigation" routerLink="/account" (click)="setClickedLink(enLinkNavbar.Accounts)" [ngClass]="getNameLink() == enLinkNavbar.Accounts ? 'active-link' : ''">
         <ion-col size="2" class="ion-align-items-center ion-justify-content-center">
           <ion-icon name="wallet-outline"></ion-icon>
         </ion-col>
@@ -39,7 +39,7 @@
         </ion-col>
       </ion-row>
       
-      <ion-row class="navigation" routerLink="/reminders" [ngClass]="getLink() == enLinkNavbar.Reminders ? 'active-link' : ''">
+      <ion-row class="navigation" routerLink="/reminders" (click)="setClickedLink(enLinkNavbar.Reminders)" [ngClass]="getNameLink() == enLinkNavbar.Reminders ? 'active-link' : ''">
         <ion-col size="2" class="ion-align-items-center ion-justify-content-center">
           <ion-icon name="checkmark-done-outline"></ion-icon>
         </ion-col>
@@ -50,7 +50,7 @@
         </ion-col>
       </ion-row>
       
-      <ion-row class="navigation" routerLink="/automatic-payment" [ngClass]="getLink() == enLinkNavbar.AutomaticPayment ? 'active-link' : ''">
+      <ion-row class="navigation" routerLink="/automatic-payment" (click)="setClickedLink(enLinkNavbar.AutomaticPayment)" [ngClass]="getNameLink() == enLinkNavbar.AutomaticPayment ? 'active-link' : ''">
         <ion-col size="2" class="ion-align-items-center ion-justify-content-center">
           <ion-icon name="repeat-outline"></ion-icon>
         </ion-col>

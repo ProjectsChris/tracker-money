@@ -18,7 +18,11 @@ export class SideMenuComponent {
     
   }
   
-  getLink(): LinkNavbar | undefined {
+  getNameLink(): LinkNavbar | undefined {
     return this._navbarService.get()
+  }
+  
+  setClickedLink(l: LinkNavbar): void {
+    this._navbarService.set(l)
   }
 }
