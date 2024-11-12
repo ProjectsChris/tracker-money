@@ -3,8 +3,8 @@
     <ion-grid class="ion-no-padding">
       <ion-row>
         <ion-col size="3" class="ion-align-items-center ion-justify-content-center">
-          <img *ngIf="loaded" id="user-info-img" [src]="urlImgProfile" />
-          <ion-skeleton-text *ngIf="!loaded" [animated]="true" style="aspect-ratio: 1/1; width: 100%;"></ion-skeleton-text>
+          <img *ngIf="loaded" class="user-info-img" [src]="urlImgProfile" />
+          <ion-skeleton-text class="user-info-img" *ngIf="!loaded" [animated]="true"></ion-skeleton-text>
         </ion-col>
         
         <ion-col size="9" class="ion-align-items-center ion-padding-start">
@@ -17,29 +17,29 @@
   
   <div class="side-bar-navigation">
     <ion-grid class="ion-no-padding">
-      <ion-row class="navigation">
+      <ion-row class="navigation" routerLink="/home" [ngClass]="getLink() == enLinkNavbar.Home ? 'active-link' : ''">
         <ion-col size="2" class="ion-align-items-center ion-justify-content-center">
           <ion-icon name="home-outline"></ion-icon>
         </ion-col>
         
-        <ion-col size="10" class="ion-align-items-center" routerLink="/home">
+        <ion-col size="10" class="ion-align-items-center">
           <p *ngIf="loaded">Home</p>
           <ion-skeleton-text *ngIf="!loaded" [animated]="true" style="width: 120px"></ion-skeleton-text>
         </ion-col>
       </ion-row>
       
-      <ion-row class="navigation">
+      <ion-row class="navigation" routerLink="/account" [ngClass]="getLink() == enLinkNavbar.Accounts ? 'active-link' : ''">
         <ion-col size="2" class="ion-align-items-center ion-justify-content-center">
           <ion-icon name="wallet-outline"></ion-icon>
         </ion-col>
         
-        <ion-col size="10" class="ion-align-items-center" routerLink="/account">
+        <ion-col size="10" class="ion-align-items-center">
           <p *ngIf="loaded">Account</p>
           <ion-skeleton-text *ngIf="!loaded" [animated]="true" style="width: 120px"></ion-skeleton-text>
         </ion-col>
       </ion-row>
       
-      <ion-row class="navigation">
+      <ion-row class="navigation" routerLink="/reminders" [ngClass]="getLink() == enLinkNavbar.Reminders ? 'active-link' : ''">
         <ion-col size="2" class="ion-align-items-center ion-justify-content-center">
           <ion-icon name="checkmark-done-outline"></ion-icon>
         </ion-col>
@@ -50,7 +50,7 @@
         </ion-col>
       </ion-row>
       
-      <ion-row class="navigation">
+      <ion-row class="navigation" routerLink="/automatic-payment" [ngClass]="getLink() == enLinkNavbar.AutomaticPayment ? 'active-link' : ''">
         <ion-col size="2" class="ion-align-items-center ion-justify-content-center">
           <ion-icon name="repeat-outline"></ion-icon>
         </ion-col>

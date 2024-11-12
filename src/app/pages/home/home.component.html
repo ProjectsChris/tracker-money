@@ -14,14 +14,18 @@
     <ion-col class="ion-padding" sizeXl="3" sizeSm="6" sizeXs="12" *ngFor="let account of accounts; let i = index">
       <ion-card class="ion-no-margin">
         <ion-card-header>
-          <ion-card-title>Account {{ account }}</ion-card-title>
+          <ion-card-title>{{ account.name }}</ion-card-title>
           <ion-card-subtitle>
-            <span class="category-card">{{ account }}</span>
+            <span class="category-card">{{ account.bank }}</span>
           </ion-card-subtitle>
         </ion-card-header>
-      
+        
         <ion-card-content>
-          <div style="height: 20px; width: 100%;"></div>
+          <div class="add-payment">
+            <ion-button size="small" fill="outline">
+              <ion-icon name="add-outline"></ion-icon>
+            </ion-button>
+          </div>
         </ion-card-content>
       </ion-card>
     </ion-col>

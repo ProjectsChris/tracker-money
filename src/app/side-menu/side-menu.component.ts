@@ -1,17 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { LinkNavbar } from 'src/enum/LinkNavbar';
+import { NavbarService } from '../service/navbar.service';
 
 @Component({
   selector: 'wp-side-menu',
   templateUrl: './side-menu.component.html',
   styleUrls: ['./side-menu.component.scss'],
 })
-export class SideMenuComponent  implements OnInit {
+export class SideMenuComponent {
+  enLinkNavbar: typeof LinkNavbar = LinkNavbar
+  
   urlImgProfile: string = "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   userName: string = "Christopher 2024"
   loaded: boolean = true
 
-  constructor() { }
-
-  ngOnInit() {}
-
+  constructor(private _navbarService: NavbarService) {
+    
+  }
+  
+  getLink(): LinkNavbar | undefined {
+    return this._navbarService.get()
+  }
 }

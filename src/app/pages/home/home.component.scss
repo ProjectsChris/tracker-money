@@ -22,5 +22,17 @@
         ion-card-title {
             color: #fff;
         }
+        
+        .add-payment {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            
+            ion-button {
+                --border-color: greenyellow;
+                color: greenyellow;
+            }
+        }
     }
 }

@@ -8,7 +8,7 @@
         margin-bottom: 32px;
         padding-top: 32px;
         
-        #user-info-img {
+        .user-info-img {
             aspect-ratio: 1/1;
             display: block;
             border-radius: 50px;
@@ -30,6 +30,10 @@
 
 .side-bar-navigation {
     height: calc(100% - 131px - 140px);
+}
+
+.active-link {
+    background-color: #000237;
 }
 
 .navigation {
