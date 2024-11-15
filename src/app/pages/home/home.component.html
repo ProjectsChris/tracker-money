@@ -22,12 +22,18 @@
         
         <ion-card-content>
           <div class="add-payment">
-            <ion-button size="small" fill="outline">
+            <!-- <ion-button size="small" fill="outline" (click)="openModal()">
               <ion-icon name="add-outline"></ion-icon>
-            </ion-button>
+            </ion-button> -->
           </div>
         </ion-card-content>
       </ion-card>
     </ion-col>
   </ion-row>
 </ion-grid>
+
+<ion-fab vertical="bottom" horizontal="end" (click)="openModal()">
+  <ion-fab-button>
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

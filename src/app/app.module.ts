@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ModalFormComponent } from './modal-form/modal-form.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
     SideMenuComponent, 
-    HomeComponent
+    HomeComponent,
+    ModalFormComponent
   ], imports: [
     BrowserModule, 
     IonicModule.forRoot(), 
