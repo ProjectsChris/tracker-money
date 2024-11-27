@@ -10,6 +10,10 @@
         color: #fff;
     }
     
+    ion-row, ion-col {
+        height: auto;
+    }
+    
     ion-card {
         background: #0d1b2a;
         overflow: hidden;
@@ -19,20 +23,21 @@
             cursor: pointer;
         }
         
-        ion-card-title {
+        ion-card-title ion-text p {
             color: #fff;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
         
-        .add-payment {
-            height: 50px;
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-            
-            ion-button {
-                --border-color: greenyellow;
-                color: greenyellow;
-            }
+        .fad-add-purchase {
+            height: 56px;
         }
+    }
+    
+    ion-skeleton-text {
+        --border-radius: 9999px;
+        --background: rgb(255, 255, 255);
+        --background-rgb: 255, 255, 255;
     }
 }

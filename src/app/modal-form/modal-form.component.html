@@ -1,13 +1,33 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="toolbar-modal">
     <ion-buttons slot="start">
-      <ion-button color="medium" >Cancel</ion-button>
+      <ion-button id="btn-cancel" (click)="cancel()">Cancel</ion-button>
     </ion-buttons>
     <ion-buttons slot="end">
-      <ion-button [strong]="true">Confirm</ion-button>
+      <ion-button id="btn-confirm" [strong]="true" (click)="confirm()">Confirm</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-<ion-content class="ion-padding">
-  <!-- form for add a new payment -->
+<ion-content class="ion-padding content-modal">
+  <ion-input label="Account" disabled="true" [value]="accountId" labelPlacement="stacked"></ion-input>
+  <ion-input label="Bank" disabled="true" [value]="nameBank" labelPlacement="stacked"></ion-input>
+  
+  <ion-input label="Price" labelPlacement="stacked" [formControl]="notes"></ion-input>
+  <ion-input label="Notes" labelPlacement="stacked" [formControl]="notes"></ion-input>
+  
+  <div class="category-purchase">
+    <ion-text><p>Category</p></ion-text>
+    <ion-chip (click)="selectChip(c)" *ngFor="let c of categories">
+      <ion-label>{{ c }}</ion-label>
+      <!-- <ion-icon name="close"></ion-icon> -->
+    </ion-chip>
+  </div>
+  
+  <ion-datetime-button datetime="datetime"></ion-datetime-button>
+  <ion-modal [keepContentsMounted]="true" class="modal-calendar">
+    <ng-template>
+      <ion-datetime presentation="date" id="datetime"></ion-datetime>
+    </ng-template>
+  </ion-modal>
+  
 </ion-content>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { LinkNavbar } from 'src/enum/LinkNavbar';
 import { NavbarService } from '../service/navbar.service';
+import { loadedData } from 'src/environments/environment';
 
 @Component({
   selector: 'wp-side-menu',
@@ -12,7 +13,7 @@ export class SideMenuComponent {
   
   urlImgProfile: string = "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   userName: string = "Christopher 2024"
-  loaded: boolean = true
+  loaded: boolean = loadedData
 
   constructor(private _navbarService: NavbarService) {
     

@@ -1,0 +1,23 @@
+.toolbar-modal {
+    --background: #0d1b2a;
+    
+    #btn-cancel {
+        --color: red;
+    }
+    
+    #btn-confirm {
+        --color: green;
+    }
+}
+
+.modal-calendar {
+    ion-datetime {
+        background: #f1f1f1;
+    }
+}
+
+.content-modal {
+    .category-purchase {
+        border: 1px solid red;
+    }
+}

@@ -9,17 +9,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ModalFormComponent } from './modal-form/modal-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent, 
     SideMenuComponent, 
     HomeComponent,
-    ModalFormComponent
+    ModalFormComponent,
   ], imports: [
     BrowserModule, 
     IonicModule.forRoot(), 
     AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
