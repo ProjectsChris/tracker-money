@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
 
 @Component({
@@ -11,11 +11,12 @@ export class ModalFormComponent  implements OnInit {
   categories: string[] = ['Home', 'Shopping', 'Health', 'Hobby']
   accountId: string = ""
   nameBank: string = ""
-  // date: Date = new Date();
   
   // init data for Form
-  notes = new FormControl('')
-  dateForm = new FormControl('')
+  purchaseForm = new FormGroup({
+    price: new FormControl('', Validators.required),
+    notes: new FormControl('', Validators.required),
+  })
   
   constructor(private _modalController: ModalController) { }
   
@@ -29,10 +30,16 @@ export class ModalFormComponent  implements OnInit {
   
   confirm(): void {
     // adds logic for add new purchase in the database
-    this._modalController.dismiss()
+    // this._modalController.dismiss()
   }
   
   selectChip(c: string): void {
     console.log(c)
+  }
+  
+  submitPurchase() {
+    console.log("submit")
+    console.log(this.purchaseForm.value)
+    this._modalController.dismiss()
   }
 }
