@@ -1,0 +1,15 @@
+services:
+  directus:
+    image: directus/directus:11.3.2
+    environment:
+      - ADMIN_EMAIL="admin@example.com"
+      - ADMIN_PASSWORD="d1r3ctu5"
+      - CORS_ENABLED=true
+      - CORS_ORIGIN=http://localhost:8100
+    volumes:
+      - ./db_data/directus/database:/directus/database
+      - ./db_data/directus/uploads:/directus/uploads
+      - ./db_data/directus/extensions:/directus/extensions
+      - ./db_data/directus/templates:/directus/templates
+    ports:
+      - 8055:8055
