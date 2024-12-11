@@ -1,0 +1,24 @@
+.category-grid-card {
+    display: flex;
+    
+    .category-icon {
+        margin-right: 14px;
+        color: #fff;
+    }
+    
+    .category-name {
+        display: flex;
+    }
+}
+
+.add-category {
+    width: 100%;
+    --border-radius: 0;
+    --border-color: blue;
+    --border-style: dashed;
+    --border-width: 2px;
+    
+    ion-icon {
+        font-size: 24px;
+    }
+}

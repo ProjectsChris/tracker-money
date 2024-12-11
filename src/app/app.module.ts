@@ -11,6 +11,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ModalFormComponent } from './modal-form/modal-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
+import { CategoryComponent } from './pages/category/category.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { provideHttpClient } from '@angular/common/http';
     SideMenuComponent, 
     HomeComponent,
     ModalFormComponent,
+    CategoryComponent
   ], imports: [
     BrowserModule, 
     IonicModule.forRoot(), 

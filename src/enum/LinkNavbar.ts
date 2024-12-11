@@ -3,4 +3,5 @@ export enum LinkNavbar {
     Accounts,
     Reminders,
     AutomaticPayment,
+    Category,
 }

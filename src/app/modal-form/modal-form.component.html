@@ -19,8 +19,8 @@
     
     <div class="category-purchase">
       <ion-text><p>Category</p></ion-text>
-      <ion-chip (click)="selectChip(c)" *ngFor="let c of categories">
-        <ion-label>{{ c }}</ion-label>
+      <ion-chip (click)="selectChip(c.name)" *ngFor="let c of categories">
+        <ion-label>{{ c.name }}</ion-label>
         <!-- <ion-icon name="close"></ion-icon> -->
       </ion-chip>
     </div>

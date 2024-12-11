@@ -1,0 +1,28 @@
+<ion-grid class="grid-component">
+  <ion-row>
+    <ion-col class="ion-padding" sizeXl="3" sizeSm="6" sizeXs="12" *ngFor="let category of categories; let i = index">
+      <ion-card class="ion-no-margin">
+        <ion-card-header>
+          <ion-card-title>
+            <div class="category-grid-card">
+              <div class="category-icon ion-align-items-center ion-justify-content-center">
+                <ion-icon name="pin"></ion-icon>
+              </div>
+              
+              <div class="category-name ion-align-items-center ion-justify-content-center">
+                <ion-skeleton-text *ngIf="!loaded" [animated]="true" style="width: 60px;"></ion-skeleton-text>
+                <ion-text *ngIf="loaded"><p class="ion-no-margin">{{ category.name }}</p></ion-text>
+              </div>
+            </div>
+          </ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+    
+    <ion-col sizeXl="3" sizeSm="6" sizeXs="12" class="ion-padding">
+      <ion-button (click)="createNewCategory()" fill="outline" class="add-category ion-justify-content-center ion-align-items-center">
+        <ion-icon name="add-outline"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>

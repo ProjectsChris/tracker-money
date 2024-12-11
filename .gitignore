@@ -70,4 +70,4 @@ testem.log
 Thumbs.db
 
 # Project
-./db_data
+db_data/directus

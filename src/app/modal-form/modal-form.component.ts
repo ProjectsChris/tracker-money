@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
+import { CategoryService } from '../service/category.service';
+import { Category } from 'src/types/Category';
 
 @Component({
   selector: 'wp-modal-form',
@@ -8,7 +10,7 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./modal-form.component.scss'],
 })
 export class ModalFormComponent  implements OnInit {
-  categories: string[] = ['Home', 'Shopping', 'Health', 'Hobby']
+  categories: Category[] = []
   accountId: string = ""
   nameBank: string = ""
   
@@ -18,9 +20,12 @@ export class ModalFormComponent  implements OnInit {
     notes: new FormControl('', Validators.required),
   })
   
-  constructor(private _modalController: ModalController) { }
+  constructor(private _modalController: ModalController, private categoryService: CategoryService) { }
   
   ngOnInit() {
+    this.categoryService.get().subscribe(c => {
+      this.categories = c
+    })
     // console.log(this.date.getDate(), this.date.getMonth(), this.date.getFullYear())
   }
   
